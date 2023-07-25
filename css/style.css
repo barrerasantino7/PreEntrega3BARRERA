@@ -1,3 +1,87 @@
+@font-face {
+  font-family: poppins;
+  src: url(/fonts/poppins/Poppins-Medium.ttf);
+}
+.encabezado {
+  background-color: #0f101a;
+  box-shadow: inset 0px 0px 50px rgb(90, 15, 15);
+}
+.encabezado .logo {
+  width: 150px;
+}
+.encabezado .enviar {
+  border: solid 1px;
+  border-radius: 3px;
+  font-family: poppins;
+}
+.encabezado .carrito {
+  text-decoration: none;
+  background-color: rgb(90, 15, 15);
+  color: white;
+  font-family: poppins;
+  border-radius: 3px;
+}
 
+nav {
+  background-color: rgb(90, 15, 15);
+}
+nav ul {
+  list-style: none;
+}
+nav ul span {
+  display: none;
+}
+nav ul .productos {
+  display: flex;
+  color: white;
+  font-family: poppins;
+}
+
+.categoria {
+  margin-left: 60px;
+  color: grey;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+section .estatico {
+  text-align: center;
+  width: 85%;
+  box-shadow: inset 0px 0px 10px grey;
+  overflow: hidden;
+}
+section .estatico:hover .movimiento {
+  transform: translateX(-1750px);
+}
+section .movimiento {
+  display: flex;
+  transition: 5s;
+}
+section .movimiento img {
+  width: 200px;
+}
+section .movimiento:hover {
+  transform: translateX(-3000px);
+}
+section .movimiento img {
+  margin: 10px;
+}
+
+@media (max-width: 480px) {
+  nav {
+    text-align: center;
+  }
+  nav ul span {
+    display: inline-block;
+    color: white;
+    font-family: poppins;
+  }
+  nav ul .productos {
+    flex-direction: column;
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

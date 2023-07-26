@@ -2,85 +2,114 @@
   font-family: poppins;
   src: url(/fonts/poppins/Poppins-Medium.ttf);
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .encabezado {
   background-color: #0f101a;
-  box-shadow: inset 0px 0px 50px rgb(90, 15, 15);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.encabezado .logo {
+.encabezado .encabezado_logo img {
   width: 150px;
 }
-.encabezado .enviar {
-  border: solid 1px;
-  border-radius: 3px;
-  font-family: poppins;
+.encabezado .encabezado_form .buscador {
+  border: 2px solid rgb(25, 90, 95);
+  height: 25px;
 }
-.encabezado .carrito {
-  text-decoration: none;
-  background-color: rgb(90, 15, 15);
+.encabezado .encabezado_form .btn {
   color: white;
-  font-family: poppins;
-  border-radius: 3px;
+  background-color: rgb(25, 90, 95);
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 5px;
+  margin: 5px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
+.navegador {
   background-color: rgb(90, 15, 15);
+  position: sticky;
+  top: 0;
+  height: 50px;
+  padding-top: 13px;
 }
-nav ul {
+.navegador .menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  text-decoration: none;
   list-style: none;
 }
-nav ul span {
-  display: none;
-}
-nav ul .productos {
-  display: flex;
+.navegador .menu .productos {
+  text-decoration: none;
   color: white;
+  font-family: poppins;
+  margin: 15px;
+}
+
+.introduccion {
+  text-align: center;
   font-family: poppins;
 }
 
-.categoria {
-  margin-left: 60px;
-  color: grey;
+.producto {
+  color: rgb(73, 73, 73);
+  font-family: poppins;
 }
 
-section {
+.contenedor {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
 }
-section .estatico {
-  text-align: center;
-  width: 85%;
-  box-shadow: inset 0px 0px 10px grey;
-  overflow: hidden;
-}
-section .estatico:hover .movimiento {
-  transform: translateX(-1750px);
-}
-section .movimiento {
+.contenedor .contenedor-tarjeta {
   display: flex;
-  transition: 5s;
+  flex-flow: column nowrap;
+  align-items: center;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 3px;
+  width: 250px;
+  margin: 10px;
+  padding: 5px;
 }
-section .movimiento img {
+.contenedor .contenedor-tarjeta .tarjeta-img {
   width: 200px;
 }
-section .movimiento:hover {
-  transform: translateX(-3000px);
+.contenedor .contenedor-tarjeta .tarjeta-cuerpo {
+  font-family: poppins;
 }
-section .movimiento img {
-  margin: 10px;
+.contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn .precio {
+  color: rgb(73, 73, 73);
+}
+.contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn .boton-carrito {
+  padding: 3px;
+  font-size: 15px;
+  font-family: poppins;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  background-color: rgb(25, 90, 95);
 }
 
-@media (max-width: 480px) {
-  nav {
-    text-align: center;
-  }
-  nav ul span {
-    display: inline-block;
-    color: white;
-    font-family: poppins;
-  }
-  nav ul .productos {
+@media (max-width: 500px) {
+  .encabezado {
     flex-direction: column;
-    display: none;
+  }
+  .navegador {
+    padding-top: 0px;
   }
 }
 

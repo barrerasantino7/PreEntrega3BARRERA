@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: poppins;
   src: url(/fonts/poppins/Poppins-Medium.ttf);
@@ -6,8 +7,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: poppins;
 }
 
+/*Encabezado*/
 .encabezado {
   background-color: #0f101a;
   display: flex;
@@ -16,6 +19,10 @@
 }
 .encabezado .encabezado_logo img {
   width: 150px;
+  cursor: pointer;
+}
+.encabezado .encabezado_logo img:hover {
+  transform: scale(1.05);
 }
 .encabezado .encabezado_form .buscador {
   border: 2px solid rgb(25, 90, 95);
@@ -28,12 +35,13 @@
   border: none;
   border-radius: 5px;
   font-size: 18px;
-  padding: 5px;
+  padding: 4px;
   margin: 5px;
   margin-bottom: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
 }
 
+/*Barra de navegación*/
 .navegador {
   background-color: rgb(90, 15, 15);
   position: sticky;
@@ -51,20 +59,28 @@
 .navegador .menu .productos {
   text-decoration: none;
   color: white;
-  font-family: poppins;
   margin: 15px;
 }
 
+/*Nombre de la página y que hacemos*/
 .introduccion {
   text-align: center;
-  font-family: poppins;
+  margin: 15px;
 }
 
+/*CSS de el nombre de los producto*/
 .producto {
   color: rgb(73, 73, 73);
-  font-family: poppins;
+  margin: 30px 150px;
+  transition: 0.5s;
+  display: inline-block;
+  cursor: pointer;
+}
+.producto:hover {
+  transform: scale(1.5);
 }
 
+/*Pagina en sí, con sus barras de productos (img, precio, boton, etc)*/
 .contenedor {
   display: flex;
   flex-flow: row wrap;
@@ -74,8 +90,8 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  box-shadow: 0px 0px 5px black;
-  border-radius: 3px;
+  box-shadow: 0px 0px 10px #0f101a;
+  border-radius: 5px;
   width: 250px;
   margin: 10px;
   padding: 5px;
@@ -83,13 +99,11 @@
 .contenedor .contenedor-tarjeta .tarjeta-img {
   width: 200px;
 }
-.contenedor .contenedor-tarjeta .tarjeta-cuerpo {
-  font-family: poppins;
-}
 .contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn {
   margin-top: 5px;
   display: flex;
   justify-content: space-between;
+  align-items: end;
 }
 .contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn .precio {
   color: rgb(73, 73, 73);
@@ -97,19 +111,58 @@
 .contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn .boton-carrito {
   padding: 3px;
   font-size: 15px;
-  font-family: poppins;
   border: none;
   border-radius: 3px;
   color: white;
   background-color: rgb(25, 90, 95);
+  transition: 0.2s;
+  margin: 3px;
+}
+.contenedor .contenedor-tarjeta .tarjeta-cuerpo .precio-btn .boton-carrito:hover {
+  transform: scale(1.1);
 }
 
+/*Pie de página*/
+footer {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 60% 40%;
+  grid-template-areas: "sn rs" "f f";
+  background-color: #0f101a;
+}
+footer div {
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+footer div h5 {
+  font-size: 15px;
+}
+footer #sn {
+  grid-area: sn;
+}
+footer #rs {
+  grid-area: rs;
+}
+footer #f {
+  grid-area: f;
+  color: rgb(73, 73, 73);
+}
+
+/*Pequeños detalles para que la página sea rsponsive*/
 @media (max-width: 500px) {
   .encabezado {
     flex-direction: column;
   }
   .navegador {
     padding-top: 0px;
+  }
+  .producto {
+    text-align: center;
+  }
+  #f {
+    margin-top: 100px;
   }
 }
 

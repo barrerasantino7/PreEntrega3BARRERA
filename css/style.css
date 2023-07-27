@@ -10,6 +10,22 @@
   font-family: poppins;
 }
 
+.carrito-sticky {
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  position: fixed;
+  background-color: rgb(25, 90, 95);
+  font-size: 25px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 20px;
+}
+
 /*Encabezado*/
 .encabezado {
   background-color: #0f101a;
@@ -27,13 +43,15 @@
 .encabezado .encabezado_form .buscador {
   border: 2px solid rgb(25, 90, 95);
   height: 25px;
+  box-shadow: 0px 0px 10px rgb(25, 90, 95);
 }
 .encabezado .encabezado_form .btn {
+  box-shadow: 0px 0px 10px rgb(25, 90, 95);
   color: white;
   background-color: rgb(25, 90, 95);
   text-decoration: none;
   border: none;
-  border-radius: 5px;
+  border-radius: 3px;
   font-size: 18px;
   padding: 4px;
   margin: 5px;
